@@ -1,6 +1,16 @@
---- GobiSerial/GobiSerial.c	2011-09-07 00:04:53.000000000 +0200
-+++ GobiSerial.mod/GobiSerial.c	2012-07-30 15:23:43.274778696 +0200
-@@ -153,6 +153,7 @@
+--- GobiSerial/GobiSerial.c	2012-07-30 15:40:56.851302379 +0200
++++ GobiSerial.mod/GobiSerial.c	2012-07-30 15:47:12.833724648 +0200
+@@ -49,6 +49,9 @@
+ #include <linux/usb.h> 
+ #include <linux/usb/serial.h>
+ #include <linux/version.h>
++#if (LINUX_VERSION_CODE >= KERNEL_VERSION( 3,3,0 ))
++   #include <linux/module.h>
++#endif
+ 
+ //---------------------------------------------------------------------------
+ // Global veriable and defination
+@@ -153,6 +156,7 @@
  {
     { USB_DEVICE( 0x05c6, 0x920c ) },   // Gobi 3000 QDL device
     { USB_DEVICE( 0x05c6, 0x920d ) },   // Gobi 3000 Composite Device
