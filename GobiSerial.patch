@@ -1,12 +1,3 @@
-diff --git a/.gitignore b/.gitignore
-index 1d45c0a..8ccfd20 100644
---- a/.gitignore
-+++ b/.gitignore
-@@ -1 +1,2 @@
- *.patch
-+*.orig
-diff --git a/GobiSerial/GobiSerial.c b/GobiSerial/GobiSerial.c
-index b07fbfa..b4f522f 100644
 --- a/GobiSerial/GobiSerial.c
 +++ b/GobiSerial/GobiSerial.c
 @@ -49,6 +49,9 @@ POSSIBILITY OF SUCH DAMAGE.
